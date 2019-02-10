@@ -9,8 +9,12 @@ public class GumballMachine {
  
 	State state = soldOutState;
 	int count = 0;
+	int gumballPrice;
+	int total;
+	String gumballType;
+	
  
-	public GumballMachine(int numberGumballs) {
+	public GumballMachine(int numberGumballs, int price, String type) {
 		soldOutState = new SoldOutState(this);
 		noQuarterState = new NoQuarterState(this);
 		hasQuarterState = new HasQuarterState(this);
@@ -20,10 +24,14 @@ public class GumballMachine {
  		if (numberGumballs > 0) {
 			state = noQuarterState;
 		} 
+		
+		this.gumballPrice = price;
+		this.gumballType = type;
+		this.total = 0;
 	}
  
-	public void insertQuarter() {
-		state.insertQuarter();
+	public void insertQuarter(int quarter) {
+		state.insertQuarter(quarter);
 	}
  
 	public void ejectQuarter() {
