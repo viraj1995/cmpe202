@@ -1,0 +1,3 @@
+# Lab 6 - Print receipt - Five guys
+<p>
+Composite design pattern is used in my code. The objects are considered as a single instance of similar objects. The primary motive behind using composite was to make the objects using tree structure show part-whole hierarchy. The code had multiple objects with similar code which handled them which made composite pattern the most optimal choice. This pattern treats individual objects and compositions uniformly. This made my code less complex and less error prone. An interface has been added to treat the primitive objects equally. The screenshots are attached showing the hierarchy and output of the code. 
